@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import streamlit as st
 
 
-merged_data = pd.read_csv("../data/merged_data.csv")
+merged_data = pd.read_csv("../Data/merged_data.csv")
 
 transaction_counts_per_city = merged_data['customer_city'].value_counts()
 
@@ -17,6 +17,7 @@ average_transaction_values_per_city = merged_data.groupby('customer_city')['paym
 
 st.title("Project Akhir Analisis Data")
 
+st.subheader("Question 1:")
 # Top 20 cities by transaction counts
 st.subheader("Top 20 cities by transaction counts")
 plt.figure(figsize=(30, 20))  # Adjust the figure size
@@ -37,6 +38,7 @@ for i, v in enumerate(top_cities_transaction):
 # Display the plot using Streamlit
 st.pyplot(plt)
 
+st.subheader("Question 2:")
 # Top 20 cities by transaction values
 st.subheader("Top 20 cities by transaction values")
 plt.figure(figsize=(30, 20))  # Adjust the figure size
