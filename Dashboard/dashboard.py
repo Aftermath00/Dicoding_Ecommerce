@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import streamlit as st
 
 
-merged_data = pd.read_csv("../Data/merged_data.csv")
+merged_data = pd.read_csv("./Data/merged_data.csv")
 
 transaction_counts_per_city = merged_data['customer_city'].value_counts()
 
